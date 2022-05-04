@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">Actions</th>
+        </tr>
+        <tr *ngFor="let item of studentData">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td><span style="cursor: pointer; margin-right: 5px;" (click)="deleteStudent(item.id)"><i
+                        class="fa fa-trash fa-2x" aria-hidden="true"></i></span>
+                <a routerLink="/edit/{{item.id}}"><i class="fa fa-edit fa-2x" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
